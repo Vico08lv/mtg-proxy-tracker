@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Moxfield Proxies",
+    "version": "0.1.0",
+    "description": "Marque en orange les cartes proxy dans mes decks Moxfield.",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://moxfield.com/decks/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "moxfield-proxies@ton-pseudo.local",
+            "data_collection_permissions": {
+                "required": [
+                    "none"
+                ]
+            }
+        }
+    }
+}
